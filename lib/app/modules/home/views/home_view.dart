@@ -13,19 +13,19 @@ class HomeView extends GetView<HomeController> {
       return Container();
     }
     return Scaffold(
-      appBar: AppBar(title: Text('Emotion Detection App')),
+      appBar: AppBar(title: const Text('Emotion Detection App')),
       body: Column(
         children: <Widget>[
-          Container(
+          SizedBox(
             height: 300,
             width: 300,
             child: CameraPreview(controller.cameraController!),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           controller.isModelLoaded
-              ? Text(
+              ? const Text(
                   'Emotion: Emotion Prediction Here') // Display the predicted emotion
-              : Text('Loading Model...'),
+              : const Text('Loading Model...'),
         ],
       ),
     );
